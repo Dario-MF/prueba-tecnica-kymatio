@@ -1,7 +1,9 @@
 <template>
-  <NavBar />
-  <h1>Main</h1>
-  <router-view />
+  <main class="main">
+    <NavBar />
+    <h1>Main</h1>
+    <router-view />
+  </main>
 </template>
 
 <script>

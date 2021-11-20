@@ -22,11 +22,10 @@ export default {
   left: 0;
   width: 100vw;
   height: 100vh;
-
   display: flex;
-  background-color: rgba(0, 0, 0, 0.5);
   align-items: center;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
 
   &.fade-in {
       animation: fadeIn ease-out 0.2s;
@@ -39,7 +38,7 @@ export default {
   .modal-container {
     width: 250px;
     height: 250px;
-    background-color: white;
+    background-color: $color-bg-white;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
