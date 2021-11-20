@@ -1,0 +1,44 @@
+
+/*Variables*/
+
+/* z-index */
+$z-back    : -10;
+$z-normal  : 1;
+$z-tooltip : 10;
+$z-fixed   : 500;
+$z-modal   : 1000;
+
+/* fuentes */
+$font-size-XXL: 80px;
+$font-size-XL: 56px;
+$font-size-L: 24px;
+$font-size-M: 16px;
+$font-size-S: 12px;
+
+/* Color */
+// paleta bootstrap
+$color-warning : #ffc107;
+$color-danger : #dc3545;
+$color-info : #17a2b8;
+$color-primary:#007bff;
+$color-success:#28a745;
+// paleta kymatio
+$color-bg-white  : #f6f6f6;
+$color-first  : #aeb6b9;
+$color-second : #f4f5f8;
+$color-third  : #9be4d8;
+$color-fourth : #0bb783;
+$color-accent : #31BA4F;
+// paleta text
+$color-text-ligth : #f6f6f6;
+$color-text-ligth-medium : #92959B;
+$color-text-dark  : #242424;
+$color-text-dark-medium : #424242;
+
+/* Mq break */
+$breakpoints: (
+    s:480px,
+    m:768px,
+    l:992px,
+    xl:1200px
+)
