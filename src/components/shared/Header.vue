@@ -2,16 +2,16 @@
   <header>
     Header
     <button
-      @click="openModal(); changeToLoginForm();"
+      @click="openModal(); changeToLoginForm()"
     >
       Login
     </button>
     <button
-      @click="openModal(); changeToRegisterFrm();"
+      @click="openModal(); changeToRegisterForm()"
     >
       Register
     </button>
-    <!-- <button @click="onLogout">Logout</button> -->
+    <button @click="getUser">Logout</button>
   </header>
 
   <modal v-if="isModalOpen" @on:close="closeModal">
@@ -26,6 +26,7 @@
 
 <script>
 import { ref } from "vue";
+import {useStore} from 'vuex'
 import Modal from "./Modal.vue";
 import LoginForm from "../modules/auth/components/LoginForm.vue";
 import RegisterForm from "../modules/auth/components/RegisterForm.vue";
@@ -37,6 +38,7 @@ export default {
     RegisterForm,
   },
   setup() {
+    const store = useStore()
     const isModalOpen = ref(false);
     const isLogin = ref(true);
     return {
@@ -46,6 +48,7 @@ export default {
       changeToRegisterForm: () => (isLogin.value = false),
       openModal: () => (isModalOpen.value = true),
       closeModal: () => (isModalOpen.value = false),
+      getUser: () => (store.dispatch('auth/signInUser', 'fakeData'))
     };
   },
 };
