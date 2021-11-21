@@ -1,6 +1,6 @@
 <template>
   <div class="modal-background fade-in" @click.self="$emit('on:close')">
-    <div class="modal-container">
+    <div class="modal">
       <slot name="body" />
     </div>
   </div>
@@ -35,12 +35,12 @@ export default {
       -ms-animation: fadeIn ease-out 0.2s;
   }
 
-  .modal-container {
-    width: 250px;
-    height: 250px;
+  .modal {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
     background-color: $color-bg-white;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -51,5 +51,24 @@ export default {
     100% {
       opacity: 1;
     }
+}
+
+@include mq(s) { 
+    .modal-background .modal {
+        padding: 3rem;
+    }
+}
+@include mq(m) { 
+    .modal-background .modal {
+        padding: 4rem;
+    }
+}
+
+@include mq(l) {
+    .modal-background .modal {
+        width: 500px;
+        height: initial;
+        padding: 3rem 2rem;
+    } 
 }
 </style>
