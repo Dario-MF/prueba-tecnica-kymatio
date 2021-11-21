@@ -1,5 +1,4 @@
 <template>
- 
   <form class="form"  @submit.prevent="onSubmit" >
     <button 
       @click="$emit('on:close')"
@@ -84,10 +83,13 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  &__title__container h3 {
-    margin-bottom: 3rem;
-    font-size: $font-size-XL;
-    color: $color-fourth;
+  &__title__container {
+    width: 100%;
+    & h3 {
+      margin-bottom: 3rem;
+      font-size: $font-size-XL;
+      color: $color-fourth;
+    }
   }
   &__forgotPassword {
     cursor: pointer;
@@ -164,19 +166,11 @@ export default {
   }
 }
 
-.form__field--checkbox {
+.form__field__checkbox {
   width: 100%;
   height: 2rem;
   & input {
-    margin: 0 1rem;
-  }
-  &__conditionsLink {
-    color: $color-fourth;
-    padding: .1rem .4rem;
-    &:hover {
-      background-color: $color-fourth;
-      color: $color-text-ligth;
-    }
+    margin: 0 1rem 2rem;
   }
 }
 
@@ -193,10 +187,10 @@ export default {
     font-size: 1rem;
   }
   
-  .form--signup .form__field:nth-child(4){
+  .form--signup .form__field:nth-child(3) {
     width: 48%;
   }
-  .form--signup .form__field:nth-child(5){
+  .form--signup .form__field:nth-child(4){
     width: 48%;
   }
   .form__btn__submit {
