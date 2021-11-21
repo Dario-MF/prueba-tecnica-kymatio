@@ -6,7 +6,7 @@ const isAuthenticatedGuard = async (to, from, next) => {
     if (ok) {
         next()
     } else {
-        next({ name: 'login' })
+        next({ name: 'home' })
     }
 }
 

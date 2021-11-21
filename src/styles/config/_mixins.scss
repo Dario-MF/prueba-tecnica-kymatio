@@ -61,3 +61,17 @@
   width      : 3rem;
   object-fit : cover;
 }
+
+@mixin btn {
+  border: none;
+  border-radius: 25px;
+  padding: 1rem 1rem;
+  background-color: $color-third;
+  color: $color-fourth;
+  font-weight: bold;
+  transition: all .2s ease-in-out;
+  &:hover {
+     box-shadow: 0 8px 8px -5px rgba(0, 0, 0, .3);
+     margin-bottom: .2rem;
+  }
+}

@@ -1,17 +1,14 @@
 <template>
   <header class="header">
-    Header
+    <div class="header--brand">
+      <img src="/assets/Kymatio-white.png" alt="brand">
+    </div>
     <button
       @click="openModal(); changeToLoginForm()"
+      class="header--btn-login"
     >
       Login
     </button>
-    <button
-      @click="openModal(); changeToRegisterForm()"
-    >
-      Register
-    </button>
-    <button @click="getUser">Logout</button>
   </header>
 
   <modal v-if="isModalOpen" @on:close="closeModal">
@@ -25,22 +22,18 @@
 </template>
 
 <script>
-import { ref } from "vue";
-import {useStore} from 'vuex'
-import Modal from "./Modal.vue";
-import LoginForm from "../modules/auth/components/LoginForm.vue";
-import RegisterForm from "../modules/auth/components/RegisterForm.vue";
+import { ref, defineAsyncComponent } from "vue";
 
 export default {
   components: {
-    Modal,
-    LoginForm,
-    RegisterForm,
+    Modal: defineAsyncComponent(() => import('@/components/shared/Modal.vue')),
+    LoginForm: defineAsyncComponent(() => import('@/components/modules/auth/components/LoginForm.vue')),
+    RegisterForm: defineAsyncComponent(() => import('@/components/modules/auth/components/RegisterForm.vue')),
   },
   setup() {
-    const store = useStore()
     const isModalOpen = ref(false);
     const isLogin = ref(true);
+
     return {
       isModalOpen,
       isLogin,
@@ -48,11 +41,26 @@ export default {
       changeToRegisterForm: () => (isLogin.value = false),
       openModal: () => (isModalOpen.value = true),
       closeModal: () => (isModalOpen.value = false),
-      getUser: () => (store.dispatch('auth/signInUser', 'fakeData'))
     };
   },
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+  .header {
+    overflow: hidden;
+    width: 100%;
+    height: 80px;
+    background-color: $color-fourth;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    &--brand img{
+      height: 50px;
+    }
+    &--btn-login {
+      @include btn
+    }
+  }
 </style>

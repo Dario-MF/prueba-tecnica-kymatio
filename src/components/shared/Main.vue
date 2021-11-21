@@ -1,19 +1,64 @@
 <template>
   <main class="main">
-    <NavBar />
-    <h1>Main</h1>
-    <router-view />
+    <header class="main--header">
+      <div class="main--header--slogan">
+        <h1>
+          <span>
+            Apoya a tu gente
+          </span>
+          <br>
+          <span>
+            Protege la compañía
+          </span>
+        </h1>
+        <h2>
+          <span>
+            Gestión del Ciberriesgo de Empleados
+          </span>
+          <br>
+          <span>
+            Activación de firewalls humanos
+          </span>
+        </h2>
+      </div>
+    </header>
   </main>
 </template>
 
 <script>
-import NavBar from "@/components/shared/NavBar.vue";
 export default {
   components: {
-    NavBar,
   },
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+  .main--header {
+    overflow: hidden;
+    width: 100%;
+    height: calc(100vh - 50px) ;
+    background-color: $color-third;
+    background-image: url("/assets/login-visual.svg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size:contain;
+    &--slogan {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+      & h1 {
+        font-size: $font-size-XL;
+        font-weight: bold;
+        color: $color-text-dark ;
+      }
+      & h2 {
+        font-size: $font-size-L;
+        font-weight: lighter;
+        color: $color-text-dark-medium;
+      }
+    }
+  }
+
 </style>

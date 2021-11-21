@@ -5,16 +5,14 @@
 </template>
 
 <script>
-import Header from "@/components/shared/Header.vue";
-import Main from "@/components/shared/Main.vue";
-import Footer from "@/components/shared/Footer.vue";
+import { defineAsyncComponent } from "vue";
 
 export default {
   name: "Home",
   components: {
-    Header,
-    Main,
-    Footer,
+    Header: defineAsyncComponent(() => import('@/components/shared/Header.vue')),
+    Main: defineAsyncComponent(() => import('@/components/shared/Main.vue')),
+    Footer: defineAsyncComponent(() => import('@/components/shared/Footer.vue')),
   },
 };
 </script>
