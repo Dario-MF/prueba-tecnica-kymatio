@@ -2,7 +2,7 @@
   <div v-if="authStatus === 'authenticating'" class="spinner-container">
     <div class="spinner">
       Espere por favor...
-      <h3 class="mt-2">
+      <h3>
         <i class="fa fa-spin fa-sync"></i>
       </h3>
     </div>
