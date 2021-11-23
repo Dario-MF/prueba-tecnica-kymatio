@@ -5,7 +5,7 @@ import * as mutations from './mutations'
 
 
 
-const myCustomeModule = {
+const chatBotModule = {
     namespaced: true,
     actions,
     getters,
@@ -15,4 +15,4 @@ const myCustomeModule = {
 
 
 
-export default myCustomeModule
+export default chatBotModule

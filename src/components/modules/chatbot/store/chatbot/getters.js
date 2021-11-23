@@ -1,5 +1,5 @@
 
 
-/* export const myGetter =  (state) => {
-    return state
-} */
+export const getDataChatbot =  (state) => {
+    return state.questions
+}
