@@ -3,8 +3,14 @@
 export const getCurrentState = (state) => {
     return state.status
 }
-export const getUserName = (state) => {
+export const getUserNameComplete = (state) => {
     return `${state.user?.first_name} ${state.user?.last_name}`
+}
+export const getUserName = (state) => {
+    return state.user?.first_name
+}
+export const getUserLastName = (state) => {
+    return state.user?.last_name
 }
 export const getEvolution = (state) => {
     return state.user.evolution
