@@ -1,7 +1,6 @@
 <template>
   <UserHeader />
-  <main class="main">
-    <NavBar />
+  <main class="main">  
     <router-view />
   </main>
   <Footer />
@@ -13,12 +12,19 @@ import { defineAsyncComponent } from "vue";
 export default {
   components: {
     UserHeader: defineAsyncComponent(() => import('@/components/modules/user/components/UserHeader.vue')),
-    NavBar: defineAsyncComponent(() => import('@/components/modules/user/components/NavBar.vue')),
     Footer: defineAsyncComponent(() => import('@/components/shared/Footer.vue')),
   }
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+  .main {
+    width: 100%;
+    background-color: $color-bg-white;
+  }
+  @include mq(l) {
+    .main {
+      margin-top: 80px;
+    }
+  }
 </style>
