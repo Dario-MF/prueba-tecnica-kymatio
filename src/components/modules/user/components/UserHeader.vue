@@ -48,8 +48,8 @@
 import { ref, defineAsyncComponent, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import Swal from 'sweetalert2'
-import useUser from '@/composables/useUser'
-import useAuth from '@/composables/useAuth'
+import useUser from '@/components/modules/user/composables/useUser'
+import useAuth from '@/components/modules/auth/composables/useAuth'
 
 export default {
   components: {
