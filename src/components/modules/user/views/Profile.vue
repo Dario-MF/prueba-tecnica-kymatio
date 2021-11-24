@@ -11,6 +11,7 @@
 import { defineAsyncComponent } from "vue";
 
 export default {
+  name: 'profile',
   components: {
     Evolution: defineAsyncComponent(() => import('@/components/modules/user/components/Evolution.vue')),
     Timeline: defineAsyncComponent(() => import('@/components/modules/user/components/Timeline.vue')),

@@ -3,10 +3,6 @@ export default {
     component: () => import(/* webpackChunkName: "user" */ '@/components/modules/user/layouts/UserLayout.vue'),
     children: [
         {
-            path: '',
-            redirect: { name: 'profile' }
-        },
-        {
             path: '/profile',
             name: 'profile',
             component: () => import(/* webpackChunkName: "profile" */ '@/components/modules/user/views/Profile.vue'),
