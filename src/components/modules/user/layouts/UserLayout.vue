@@ -2,7 +2,7 @@
   <UserHeader />
   <main class="main">  
     <router-view /> 
-    <ChatBot />
+    
   </main>
   <Footer />
 </template>
@@ -13,7 +13,6 @@ import { defineAsyncComponent } from "vue";
 export default {
   components: {
     UserHeader: defineAsyncComponent(() => import('@/components/modules/user/components/UserHeader.vue')),
-    ChatBot: defineAsyncComponent(() => import('@/components/modules/chatbot/components/ChatBot.vue')),
     Footer: defineAsyncComponent(() => import('@/components/shared/Footer.vue')),
   }
 }
