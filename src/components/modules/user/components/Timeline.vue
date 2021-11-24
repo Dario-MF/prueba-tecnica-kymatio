@@ -17,7 +17,8 @@
 </template>
 
 <script>
-import useUser from '@/composables/useUser'
+import useUser from '@/components/modules/user/composables/useUser'
+
 export default {
     setup() {
         const {timeline} = useUser()

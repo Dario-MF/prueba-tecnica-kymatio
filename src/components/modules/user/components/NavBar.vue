@@ -52,7 +52,7 @@
 <script>
 import { useRouter } from 'vue-router'
 import Swal from 'sweetalert2'
-import useAuth from '@/composables/useAuth'
+import useAuth from '@/components/modules/auth/composables/useAuth'
 
 export default {
   props: {

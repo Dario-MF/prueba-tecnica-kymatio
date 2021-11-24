@@ -12,7 +12,7 @@
 </template>
 <script>
 import { defineAsyncComponent } from "vue";
-import useAuth from "../composables/useAuth";
+import useAuth from "@/components/modules/auth/composables/useAuth";
 
 export default {
   components: {
